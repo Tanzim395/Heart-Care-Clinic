@@ -1,0 +1,21 @@
+hr{
+  border: 1px solid black;
+}
+
+.login{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   height: 400px;
+  }
+  .login input{
+    font-size: 15px;
+    width:375px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+  }

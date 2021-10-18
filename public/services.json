@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "ECG",
+        "description": "Electro Cardiogram (ECG) is a simple and usually conducted test which maps the electrical activity of the heart. It is indicative of the condition of blood supply to the heart. Chest X-Ray is a simple procedure that scans the lung and heart for diseases and irregularities.",
+        "img": "https://www.theengineeringprojects.com/wp-content/uploads/2017/08/Introduction-to-ECG_3-2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Cardiac Checkup Package",
+        "description": "A Heart Health Check is a regular checkup performed by your doctor. A cardiovascular Health Check helps you to understand your risk factors for heart disease and estimate how likely you are to have a heart attack or stroke in the next five years.",
+        "img": "https://cdn-blog.credihealth.com/wp-content/uploads/2019/09/Health-Checkup.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Specialized OT",
+        "description": "The medical student and interested people were allowed to be present and witness the procedure as it was carried out. This gallery resembled like the theater and the purpose being operation, gave rise to the term correctly as 'Operation Theater.",
+        "img": "https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2020/09/minimalInvasiveSurgery-071520-CC-770x553-1-650x428.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Dedicated CCU",
+        "description": "What's a CCU? The acronym CCU sometimes stands for a critical care unit. When used this way, critical care and intensive care have the same meaning and offer the same type of care. In this instance, CCU and ICU can be used interchangeably.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasQHJugWe2DbUpgj_pWkyPPR0OH2o77LPSQ&usqp=CAU"
+    },
+    {
+        "id": 5,
+        "name": "ICU",
+        "description": "Intensive care units (ICUs) are specialist hospital wards that provide treatment and monitoring for people who are very ill. They're staffed with specially trained healthcare professionals and contain sophisticated monitoring equipment.",
+        "img": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/01/INTENSIVE-CARE-UNIT-1296x728-header.jpg?w=1155&h=1528"
+    },
+    {
+        "id": 6,
+        "name": "Angioplasty",
+        "description": "Angioplasty, also known as balloon angioplasty and percutaneous transluminal angioplasty, is a minimally invasive endovascular procedure used to widen narrowed or obstructed arteries or veins, typically to treat arterial atherosclerosis.",
+        "img": "https://www.verywellhealth.com/thmb/kwROousZ_7FTgyTzHf8cLloJJpY=/3889x2563/filters:no_upscale():max_bytes(150000):strip_icc()/490631099-56a4707e3df78cf772826a19.jpg"
+    }
+]
