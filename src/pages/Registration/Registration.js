@@ -15,7 +15,7 @@ const Registration = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const redirect = location.state?.from || '/home';
+    // const redirect = location.state?.from || '/home';
 
     //    getname
     const handleNameChange = e => {
@@ -47,7 +47,7 @@ const Registration = () => {
         }
         registerNewUser(email, password)
             .then(() => {
-                history.push(redirect);
+                history.push('/home');
                 setUserName(name);
             })
             .catch((error) => {
@@ -59,7 +59,7 @@ const Registration = () => {
 
     return (
         <Form onSubmit={handleSignUp} className='login  mt-5 mb-5'>
-            <h1 className='text-info mt-5'>Sign Up Here</h1>
+            <h1 className='text-secondary mt-5'>Sign Up Here</h1>
             <div>
                 <input onBlur={handleNameChange} type="text" name="" id="" placeholder='Enter your name' required />
                 <br />
@@ -70,11 +70,11 @@ const Registration = () => {
                 <p className="text-danger">{error}</p>
                 <br />
 
-                <button type="submit" className='bg-info rounded text-white' style={{ width: "50%" }}>Sign Up </button>
+                <button type="submit" className='bg-primary rounded text-white' style={{ width: "50%" }}>Sign Up </button>
                 <br />
                 <br />
                 <NavLink to='/login'>
-                    <p> Already have account?</p>
+                    <p className="text-primary"> Already have account?</p>
                 </NavLink>
 
             </div>

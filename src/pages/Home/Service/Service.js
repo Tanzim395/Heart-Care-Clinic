@@ -7,7 +7,7 @@ const Service = ({ service }) => {
     const { id, name, description, img } = service;
     return (
         <div className="rounded  ">
-            <Col className='shadow mb-5 pb-3 img-fluid'> <img style={{ width: "350px", height: '200px', borderRadius: '10px' }} src={img} alt="" /></Col>
+            <Col className='shadow mb-5 pb-3 col-lg-4 col-sm-6 col-12 img-fluid'> <img style={{ width: "350px", height: '200px', borderRadius: '10px' }} src={img} alt="" /></Col>
             <Col ><h4>{name}</h4></Col>
             <Col><small>{description}</small></Col>
 

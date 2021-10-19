@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/pages/Shared/Header/Header'
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
-import Footer from './pages/Shared/Footer/Footer';
 import Login from './pages/Login/Login/Login';
 import Registration from './pages/Registration/Registration';
 import Details from './pages/Details/Details';
 import AuthProvider from './pages/context/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import Footer from './pages/Shared/Footer/Footer';
 
 
 function App() {

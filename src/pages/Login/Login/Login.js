@@ -6,7 +6,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import './Login.css';
-import useFirebase from '../../../hooks/useFirebase';
 import { Form } from 'react-bootstrap';
 library.add(faGoogle);
 const Login = () => {
@@ -28,7 +27,7 @@ const Login = () => {
     const handlePasswordChange = e => {
         setPassword(e.target.value);
     }
-    const handleSignUp = (e) => {
+    const handleSignIn = (e) => {
         e.preventDefault();
         console.log(email, password);
         console.log(password.length);
@@ -59,8 +58,8 @@ const Login = () => {
 
 
     return (
-        <Form onSubmit={handleSignUp} className="login  mt-5 mb-5  ">
-            <h1 className='text-primary'>Login Here</h1>
+        <Form onSubmit={handleSignIn} className="login  mt-5 mb-5 pt-5  ">
+            <h1 className='text-secondary'>Login Here</h1>
             <div>
                 <input onBlur={handleEmailChange} type="email" name="" id="" placeholder="Please Enter your email" required />
                 <br />

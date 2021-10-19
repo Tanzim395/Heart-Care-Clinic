@@ -13,7 +13,7 @@ const Header = () => {
     console.log(user);
 
     if (isLoading) {
-        return <Spinner animation="border" variant="danger" />
+        return <Spinner animation="border" variant="primary" />
     }
 
     return (
@@ -30,9 +30,9 @@ const Header = () => {
                         >
                             <Nav.Link as={HashLink} className="text-white me-3" to='/home#home'>Home</Nav.Link>
                             <Nav.Link as={HashLink} className="text-white me-3" to='/home#services'>Services</Nav.Link>
-                            <Nav.Link className="text-white me-3" href="#action2">Physicians</Nav.Link>
-                            <Nav.Link className="text-white me-3" href="#action2">Telemedicine Corner</Nav.Link>
-                            <Nav.Link className="text-white me-3" href="#action2">About Us</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to='/home#experts'>Experts</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to='/home#faq'>FAQ</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to="/home#about">About Us</Nav.Link>
 
                         </Nav >
 
