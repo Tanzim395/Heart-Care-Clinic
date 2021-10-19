@@ -48,7 +48,7 @@ const Footer = () => {
                     </FooterCol>
                 </div>
                 <div className="copyRight text-center">
-                    <p className="text-white"><small>Copyright 2021 All Rights Reserved</small></p>
+                    <p className="text-white"><small>Copyright © 2021 All Rights Reserved</small></p>
                 </div>
             </div>
         </footer>
