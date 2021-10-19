@@ -42,7 +42,7 @@ const Registration = () => {
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError('Password must contain 2 uppercase letter');
+            setError('Passwords should contain atleast 2 upperCase letter');
             return;
         }
         registerNewUser(email, password)
