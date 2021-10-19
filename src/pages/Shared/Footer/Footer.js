@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="container p-5">
                 <div className="row py-5">
                     <FooterCol key={1} menuTitle={"Divisions"} menuItems={noNamed} />
-                    <FooterCol key={2} menuTitle="Services" menuItems={services} />
+                    <FooterCol key={2} menuTitle="Addition" menuItems={services} />
                     <FooterCol key={3} menuTitle="Heart Health" menuItems={oralHealth} />
                     <FooterCol key={4} menuTitle="Contact Us" menuItems={ourAddress}>
                         <ul className="social-media list-inline">

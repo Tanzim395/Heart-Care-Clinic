@@ -77,7 +77,7 @@ const Login = () => {
                 <br />
                 <br />
                 <NavLink to='/registration'>
-                    <p className="text-warning">New on this site?</p>
+                    <p className="text-danger">Don't have a Account?</p>
                 </NavLink>
 
 

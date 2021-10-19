@@ -67,6 +67,8 @@ const Registration = () => {
                 <br />
                 <input onBlur={handlePasswordChange} type="password" name="" id="" placeholder=" Enter your Password" required />
                 <br />
+                <input onBlur={handlePasswordChange} type="password" name="" id="" placeholder=" Re-Enter your Password" required />
+                <br />
                 <p className="text-danger">{error}</p>
                 <br />
 
@@ -74,7 +76,7 @@ const Registration = () => {
                 <br />
                 <br />
                 <NavLink to='/login'>
-                    <p className="text-primary"> Already have account?</p>
+                    <p className="text-success"> Already have account?</p>
                 </NavLink>
 
             </div>
