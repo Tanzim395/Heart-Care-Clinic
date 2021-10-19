@@ -6,17 +6,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import './Login.css';
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import initializeAuthentication from '../Firebase/firebase.init';
 import useFirebase from '../../../hooks/useFirebase';
 import { Form } from 'react-bootstrap';
-// initializeAuthentication();
 library.add(faGoogle);
 const Login = () => {
     const { processLogIn } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState();
+    const [error, setError] = useState("");
     const { signInGoogle } = useAuth();
     const location = useLocation();
     const redirect = location.state?.from || '/home';
@@ -46,6 +43,9 @@ const Login = () => {
         processLogIn(email, password)
             .then(() => {
                 history.push(redirect);
+            })
+            .catch((error) => {
+                setError(error.message);
             })
     }
 
