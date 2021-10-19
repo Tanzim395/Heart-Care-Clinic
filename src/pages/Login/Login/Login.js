@@ -8,6 +8,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import './Login.css';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
+import useFirebase from '../../../hooks/useFirebase';
 import { Form } from 'react-bootstrap';
 initializeAuthentication();
 library.add(faGoogle);

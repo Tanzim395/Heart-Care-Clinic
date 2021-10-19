@@ -4,7 +4,10 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase
 import initializeAuthentication from '../Login/Firebase/firebase.init';
 import { Form } from 'react-bootstrap';
 import { useHistory } from 'react-router';
+
+
 initializeAuthentication();
+
 const Registration = () => {
     const auth = getAuth();
     const [user, setUser] = useState('');
@@ -13,12 +16,12 @@ const Registration = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState();
     const history = useHistory();
-    //    getname
+    //    get target user name
     const handleNameChange = e => {
         setName(e.target.value);
     }
 
-    //    getemail
+    //    get target user input value
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     }

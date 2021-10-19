@@ -1,15 +1,20 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
-import useAuth from '../../../hooks/useAuth'
+import useAuth from '../../../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
     const elementIcon = <FontAwesomeIcon icon={faHeartbeat} />
-    const { user, logout } = useAuth();
+    const { user, logout, isLoading } = useAuth();
     console.log(user);
+
+    if (isLoading) {
+        return <Spinner animation="border" variant="danger" />
+    }
 
     return (
         <div className='pb-2'>
@@ -31,7 +36,7 @@ const Header = () => {
 
                         </Nav >
 
-                        {user?.email && user?.displayName ?
+                        {user?.email ?
                             <div className='d-flex flex-column flex-lg-row'>
                                 <Nav.Link onClick={logout} className="text-white me-2" as={Link} to='/login'>Logout</Nav.Link>
                                 <span className='mt-2 text-warning'>Signed in as: {user.displayName}</span>
