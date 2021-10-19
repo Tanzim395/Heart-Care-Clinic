@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import initializeAuthentication from '../Login/Firebase/firebase.init';
+
 import { Form } from 'react-bootstrap';
-import { useHistory } from 'react-router';
-
-
-initializeAuthentication();
+import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../hooks/useAuth';
 
 const Registration = () => {
-    const auth = getAuth();
-    const [user, setUser] = useState('');
+
+    const { registerNewUser, setUserName } = useAuth();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState();
+    const [error, setError] = useState('');
+
+    const location = useLocation();
     const history = useHistory();
-    //    get target user name
+    const redirect = location.state?.from || '/home';
+
+    //    getname
     const handleNameChange = e => {
         setName(e.target.value);
     }
 
-    //    get target user input value
+    //    getemail
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     }
@@ -30,6 +31,8 @@ const Registration = () => {
     const handlePasswordChange = e => {
         setPassword(e.target.value);
     }
+
+
     const handleSignUp = (e) => {
         e.preventDefault();
         console.log(email, password, name);
@@ -42,34 +45,18 @@ const Registration = () => {
             setError('Password must contain 2 uppercase letter');
             return;
         }
-        registerNewUser(email, password);
-    }
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-
-                const user = result.user;
-                console.log(user);
-                setUser(user);
-                setError('');
-                setUserName();
+        registerNewUser(email, password)
+            .then(() => {
+                history.push(redirect);
+                setUserName(name);
             })
-
-            .catch(error => {
+            .catch((error) => {
                 setError(error.message);
             })
-    }
-    const setUserName = () => {
-        updateProfile(auth.currentUser, {
-            displayName: name
-        }).then((result) => {
 
-        }).catch((error) => {
-
-        });
-        alert('Hoorrayy!!! You are all set up. Lets Go!!')
-        history.push('/login');
     }
+
+
     return (
         <Form onSubmit={handleSignUp} className='login  mt-5 mb-5'>
             <h1 className='text-info mt-5'>Sign Up Here</h1>
@@ -97,3 +84,4 @@ const Registration = () => {
 };
 
 export default Registration;
+

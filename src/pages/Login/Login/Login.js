@@ -6,14 +6,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import './Login.css';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import initializeAuthentication from '../Firebase/firebase.init';
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import initializeAuthentication from '../Firebase/firebase.init';
 import useFirebase from '../../../hooks/useFirebase';
 import { Form } from 'react-bootstrap';
-initializeAuthentication();
+// initializeAuthentication();
 library.add(faGoogle);
 const Login = () => {
-    const auth = getAuth();
+    const { processLogIn } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState();
@@ -43,20 +43,9 @@ const Login = () => {
             setError('Password should contain  atleast 2 uppercase letter');
             return;
         }
-        processLogIn(email, password);
-    }
-
-    const processLogIn = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-                setError('');
+        processLogIn(email, password)
+            .then(() => {
                 history.push(redirect);
-            })
-
-            .catch(error => {
-                setError(error.message);
             })
     }
 
