@@ -32,7 +32,7 @@ const Login = () => {
         console.log(email, password);
         console.log(password.length);
         if (password.length < 6) {
-            setError('Password must be at least 6 characters long');
+            setError('Password Too Weak. Add < 6 Character Long.');
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {

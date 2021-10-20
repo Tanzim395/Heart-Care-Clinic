@@ -7,7 +7,7 @@ const Service = ({ service }) => {
     const { id, name, description, img } = service;
     return (
         <div className="servicecard rounded ">
-            <Col className='shadow-none mb-4 img-fluid'> <img style={{ width: "350px", height: '200px', borderRadius: '10px' }} src={img} alt="" /></Col>
+            <Col className='shadow-none mb-4 img-fluid'> <img style={{ width: "300px", height: '200px', borderRadius: '10px' }} src={img} alt="" /></Col>
             <Col ><h4>{name}</h4></Col>
             <Col><small>{description}</small></Col>
 

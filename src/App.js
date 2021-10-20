@@ -10,6 +10,8 @@ import Details from './pages/Details/Details';
 import AuthProvider from './pages/context/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './pages/Shared/Footer/Footer';
+import About from './pages/About/About';
+import Telemedicine from './pages/Telemedicine/Telemedicine';
 
 
 function App() {
@@ -33,6 +35,14 @@ function App() {
 
             <Route path='/registration'>
               <Registration></Registration>
+            </Route>
+
+            <Route path='/about'>
+              <About></About>
+            </Route>
+
+            <Route path='/telemedicine'>
+              <Telemedicine></Telemedicine>
             </Route>
 
             <PrivateRoute path='/detail/:id'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import docexp1 from '../../../images/surgeons/doc-1.jpg';
 import docexp2 from '../../../images/surgeons/doc-2.jpg';
-import docexp3 from '../../../images/surgeons/doc-4.jpg';
+import docexp3 from '../../../images/surgeons/doc-3.jpg';
 import docexp4 from '../../../images/surgeons/doc-4.jpg';
 import docexp5 from '../../../images/surgeons/doc-5.jpg';
 import docexp6 from '../../../images/surgeons/doc-6.jpeg';
@@ -45,8 +45,8 @@ const experts = [
     },
     {
         img: docexp7,
-        name: 'Dr. Eduardo Marban',
-        speciality: 'IM Cardiology'
+        name: 'Dr. Devi Shetty',
+        speciality: 'Sr. Cardiologist'
     },
     {
         img: docexp8,

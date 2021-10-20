@@ -19,8 +19,9 @@ const Details = () => {
                 <img style={{ width: '400px', borderRadius: '10px' }} src={matchService?.img} alt="" />
             </div>
             <div className='w-50'>
-                <h4>{matchService?.name}</h4>
-                <p >{matchService?.description}</p>
+                <h2 className="text-success">We'll Provide You</h2>
+                <h4 className="text-primary">{matchService?.name}</h4>
+                <i className="text-danger">{matchService?.description}</i>
 
             </div>
         </div>

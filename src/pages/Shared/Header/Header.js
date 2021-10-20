@@ -31,9 +31,9 @@ const Header = () => {
                         >
                             <Nav.Link as={HashLink} className="text-white me-3" to='/home#home'>Home</Nav.Link>
                             <Nav.Link as={HashLink} className="text-white me-3" to='/home#services'>Services</Nav.Link>
-                            <Nav.Link as={HashLink} className="text-white me-3" to='/home#experts'>Experts</Nav.Link>
-                            <Nav.Link as={HashLink} className="text-white me-3" to='/home#faq'>FAQ</Nav.Link>
-                            <Nav.Link as={HashLink} className="text-white me-3" to="/home#about">About Us</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to='/home#experts'>Doctors</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to='/telemedicine'>Telemedicine</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-white me-3" to="/about">About Us</Nav.Link>
 
                         </Nav >
 
@@ -45,10 +45,9 @@ const Header = () => {
 
                             :
                             <div>
-                                <Nav.Link className="text-white me-2" as={Link} to='/login'>Login</Nav.Link>
+                                <Nav.Link className="text-white me-2" as={Link} to='/login'><button className="btn-danger border rounded">Login</button></Nav.Link>
 
                             </div>
-
 
                         }
 
